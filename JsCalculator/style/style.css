@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.calculator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: lightgrey;
+    padding: 45px;
+    border-radius: 25px;
+}
+.expField {
+    padding: 10px 0 !important;
+    background: none !important;
+    border: none !important;
+}
+input#expression {
+    font-size: 20px;
+    background: none;
+    border: solid;
+    padding: 10px 5px;
+}
+table tr td {
+    color: rgba(0,0,0,.6);
+    background-color: azure;
+    padding: 15px;
+    border-style: inset;
+    border-radius: 16px;
+    font-size: 15px;
+    text-align: center;
+}
+textarea {
+    padding: 15px;
+    background-color: rgba(0,0,0,.3);
+    font-size: 15px;
+}
+table {
+    font-size: 30px;
+}
