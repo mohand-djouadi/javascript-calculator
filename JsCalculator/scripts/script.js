@@ -6,7 +6,7 @@ function pressNumber(number) {
     }
 }
 function addExpressOperator(operator) {
-    if (express.value !== "" && !isNaN(express.value[express.value.length-1])) {
+    if (express.value !== "" || operatSymboles.includes(express.value[express.value.length-1])) {
         express.value += operator
     }
 }
@@ -22,16 +22,33 @@ function addFloat() {
         express.value += "."
     }
 }
-function openSubExpression() {
-    if (!isNaN(express.value[express.value.length-1])) {
-        express.value += "*("
-    } else {
-        express.value += "("
+function addSubExpression() {
+    let nbOpenExp = 0
+    for (let i=0; i<express.value.length; i++) {
+        if (express.value[i] === '('){
+            nbOpenExp++
+        }
     }
-}
-function closeSubExpression() {
-    if (!isNaN(express.value[express.value.length-1])) {
-        express.value += ")"
+    if (express.value === "") {
+        express.value += "("
+    } else {
+        if (nbOpenExp === 0) {
+            if (operatSymboles.includes(express.value[express.value.length-1])) {
+                express.value += "("
+            } else {
+                express.value += "*("
+            }
+        } else {
+            if (operatSymboles.includes(express.value[express.value.length-1])) {
+                express.value += "("
+            } else {
+                if (!isNaN(express.value[express.value.length-1])) {
+                    express.value += ")"
+                } else if (express.value[express.value.length-1] === ")") {
+                    express.value += "*("
+                }
+            }
+        }
     }
 }
 function resetExpression() {
@@ -41,6 +58,5 @@ function deleteChar() {
     express.value = express.value.slice(0,-1)
 }
 function validatExpression(expression) {
-    let regex = new RegExp('/^([0-9]+(\.[0-9]=)?|[()]|[-+*/])*$')
     return regex.test(expression)
 }

@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <script src="scripts/sources.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/events.js" defer></script>
+    <script src="scripts/main.js" defer></script>
     <title>Calculator</title>
 </head>
 <body>
@@ -14,21 +18,21 @@
             </tr>
             <tr>
                 <td class="reset">C</td>
-                <td class="opensub">(</td>
-                <td class="closesub">)</td>
+                <td class="subexp">()</td>
                 <td class="delete">sup</td>
+                <td class="operators">/</td>
             </tr>
             <tr>
                 <td class="number">7</td>
                 <td class="number">8</td>
                 <td class="number">9</td>
-                <td class="operators">/</td>
+                <td class="operators">*</td>
             </tr>
             <tr>
                 <td class="number">4</td>
                 <td class="number">5</td>
                 <td class="number">6</td>
-                <td class="operators">*</td>
+                <td class="operators">-</td>
             </tr>
             <tr>
                 <td class="number">1</td>
@@ -40,15 +44,9 @@
                 <td class="negative">+/-</td>
                 <td class="number">0</td>
                 <td class="float">,</td>
-                <td class="operators">-</td>
-            </tr>
-            <tr>
-                <td colspan="4" class="result">=</td>
+                <td class="result">=</td>
             </tr>
         </table>
     </main>
-    <script src="scripts/scources.js"></script>
-    <script src="scripts/script.js"></script>
-    <script src="scripts/main.js"></script>
 </body>
 </html>

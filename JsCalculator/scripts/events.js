@@ -24,17 +24,14 @@ negative.addEventListener('click', () => {
 float.addEventListener('click', () => {
     addFloat()
 })
+subExp.addEventListener('click', () => {
+    addSubExpression()
+})
 sup.addEventListener('click', () => {
     deleteChar()
 })
 reset.addEventListener('click', () => {
     resetExpression()
-})
-openSub.addEventListener('click', () => {
-    openSubExpression()
-})
-closeSub.addEventListener('click', () => {
-    closeSubExpression()
 })
 result.addEventListener('click', () => {
     validatExpression(express.value)
