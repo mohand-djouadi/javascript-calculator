@@ -33,6 +33,3 @@ sup.addEventListener('click', () => {
 reset.addEventListener('click', () => {
     resetExpression()
 })
-result.addEventListener('click', () => {
-    validatExpression(express.value)
-})

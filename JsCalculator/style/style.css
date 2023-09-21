@@ -42,3 +42,9 @@ textarea {
 table {
     font-size: 30px;
 }
+.erreur {
+    display: none;
+}
+.active {
+    display: table-cell;
+}

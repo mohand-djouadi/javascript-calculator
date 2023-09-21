@@ -8,4 +8,4 @@ let negative = document.querySelector('.negative')
 let float = document.querySelector('.float')
 let result = document.querySelector('.result')
 let operatSymboles = ['+', '*', '-', '/']
-let regex = new RegExp('')
+let erreur = document.querySelector('.erreur')
